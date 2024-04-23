@@ -14,18 +14,18 @@ Also, it offers flexibility for deployment, allowing for local deployment or con
 ## Local Deployment
 To deploy the application locally, follow these steps:
 1. Clone the repository to your local machine.
-1. Create a local enviroment (it is a good practice to isolate enviroments) and activate it.
+2. Create a local enviroment (it is a good practice to isolate enviroments) and activate it.
 ```
 python -m venv venv
 ```
 ```
 venv\Scripts\activate
 ```
-1. Install the required dependencies listed in requirements.txt.
+3. Install the required dependencies listed in requirements.txt.
 ```
 pip install -r requirements.txt
 ```
-1. Run the FastAPI server using the provided command.
+4. Run the FastAPI server using the provided command.
 ```
 uvicorn api.main:app --reload
 ```
@@ -38,11 +38,11 @@ Alternatively, you can deploy the application as a container using Docker.
 
 Follow these steps:
 1. Ensure Docker is installed on your system.
-1. Build the Docker image using the provided Dockerfile.
+2. Build the Docker image using the provided Dockerfile.
   ```
 docker build -t pi_python_challenge .
   ```
-1. Run the Docker container (port 8000 by default).
+3. Run the Docker container (port 8000 by default).
   ```
 docker run -d -p 8000:8000 pi_python_challenge
   ```
