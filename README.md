@@ -5,7 +5,7 @@ Welcome, `3.14` reviewer!
 
 In this repository, you will find my solution for `Pi Data Strategy & Consulting` - `Python Backend` challenge.
 
-If you don't have the challenge itself, don't worry, I will attach it in this file: [Click here](https://github.com/AugustoCarloPareja/pi_python_challenge/blob/master/ChallengePython-Interview.docx)
+If you don't have the challenge itself, don't worry, I will attach it in this file: [Click here](https://github.com/AugustoCarloPareja/pi_python_challenge/blob/master/ChallengePython-Interview.pdf)
 
 This app was created using FastAPI (I really love `pydantic`!).
 
