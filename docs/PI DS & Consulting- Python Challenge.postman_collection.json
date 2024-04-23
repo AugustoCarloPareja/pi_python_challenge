@@ -1,0 +1,386 @@
+{
+	"info": {
+		"_postman_id": "d120cbe8-fbd0-4617-8ced-78184a14c986",
+		"name": "PI DS & Consulting: Python Challenge",
+		"description": "# 🚀 PI DATA STRATEGY & CONSULTING\n\n# 🔖 Python Challenge\n\n#### **Available functions of RESTful API:**\n\n1. Get all characters of database.\n    \n2. Get specific character based on its `id` attribute.\n    \n3. Insert new character.\n    \n4. Delete any character based its `id` attribute.\n    \n\nThis collection contains each of these request types. Open each request and click \"Send\" to see what happens.\n\n#### **View responses**\n\nObserve the response tab for status code (200 OK), response time, and size.\n\n#### **Update variables if needed**\n\n- By default, it have been created a variable called `base_url` with the localhost URL itself.\n    \n\n## 💪 Thanks for watching!",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18157933"
+	},
+	"item": [
+		{
+			"name": "Get all characters",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/character/getAll",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"character",
+						"getAll"
+					]
+				},
+				"description": "This endpoint is used to \"get\" all characters from database.\n\nA successful response will have a `200 OK` status and will include an array of all characters from database."
+			},
+			"response": [
+				{
+					"name": "Example",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/character/getAll",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"character",
+								"getAll"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Tue, 23 Apr 2024 18:27:18 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "525"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"name\": \"Darth Vader\",\n        \"height\": 202,\n        \"hair_color\": \"black\",\n        \"eye_color\": \"yellow\",\n        \"mass\": 136,\n        \"id\": 1,\n        \"skin_color\": \"white\",\n        \"birth_year\": 1954\n    },\n    {\n        \"name\": \"Mario\",\n        \"height\": 170,\n        \"hair_color\": \"black\",\n        \"eye_color\": \"brown\",\n        \"mass\": 67,\n        \"id\": 2,\n        \"skin_color\": \"white\",\n        \"birth_year\": 1985\n    },\n    {\n        \"name\": \"Luigi\",\n        \"height\": 185,\n        \"hair_color\": \"brown\",\n        \"eye_color\": \"brown\",\n        \"mass\": 80,\n        \"id\": 3,\n        \"skin_color\": \"white\",\n        \"birth_year\": 1983\n    },\n    {\n        \"name\": \"Princess Daisy\",\n        \"height\": 166,\n        \"hair_color\": \"brown\",\n        \"eye_color\": \"blue\",\n        \"mass\": 62,\n        \"id\": 4,\n        \"skin_color\": \"white\",\n        \"birth_year\": 1989\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get character",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/character/get/{id}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"character",
+						"get",
+						"{id}"
+					]
+				},
+				"description": "This endpoint is used to \"get\" a specific character from database, based on its `id` (via query parameters).\n\nA successful response will have a `200 OK` status and will include a specific character object."
+			},
+			"response": [
+				{
+					"name": "Example",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/character/get/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"character",
+								"get",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Tue, 23 Apr 2024 18:27:43 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "134"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Darth Vader\",\n    \"height\": 202,\n    \"hair_color\": \"black\",\n    \"eye_color\": \"yellow\",\n    \"mass\": 136,\n    \"id\": 1,\n    \"skin_color\": \"white\",\n    \"birth_year\": 1954\n}"
+				}
+			]
+		},
+		{
+			"name": "Add character",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 5,\n    \"name\": \"Bowser\",\n    \"height\": 250,\n    \"mass\": 120,\n    \"hair_color\": \"red\",\n    \"skin_color\": \"yellow\",\n    \"eye_color\": \"black\",\n    \"birth_year\": 1985\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/character/add",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"character",
+						"add"
+					]
+				},
+				"description": "This endpoint is used to insert data to the database is a POST request. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request will return a `200 OK` response code."
+			},
+			"response": [
+				{
+					"name": "Example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 4,\n    \"name\": \"Princess Daisy\",\n    \"height\": 166,\n    \"mass\": 62,\n    \"hair_color\": \"brown\",\n    \"skin_color\": \"white\",\n    \"eye_color\": \"blue\",\n    \"birth_year\": 1989\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/character/add",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"character",
+								"add"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Tue, 23 Apr 2024 18:27:13 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "134"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Princess Daisy\",\n    \"height\": 166,\n    \"hair_color\": \"brown\",\n    \"eye_color\": \"blue\",\n    \"mass\": 62,\n    \"id\": 4,\n    \"skin_color\": \"white\",\n    \"birth_year\": 1989\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete character",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/character/delete/{id}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"character",
+						"delete",
+						"{id}"
+					]
+				},
+				"description": "This is a DELETE request, and it is used to delete data that was previously created via a POST request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful DELETE request typically returns a `200 OK`, `202 Accepted`, or `204 No Content` response code."
+			},
+			"response": [
+				{
+					"name": "Example",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/character/delete/5",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"character",
+								"delete",
+								"5"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Tue, 23 Apr 2024 18:29:15 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "44"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Character deleted successfully\"\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "localhost:8000"
+		}
+	]
+}
