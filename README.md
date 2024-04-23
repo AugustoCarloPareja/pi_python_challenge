@@ -44,7 +44,7 @@ docker build -t pi_python_challenge .
   ```
 1. Run the Docker container (port 8000 by default).
   ```
-docker run -d -p 8000:80 pi_python_challenge
+docker run -d -p 8000:8000 pi_python_challenge
   ```
 
 ## Documentation / Swagger Docs
